@@ -1,0 +1,99 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { title, hook, summary, tags, links, cover, coverAlt, status } =
+  project.data;
+const { Content } = await render(project);
+---
+
+<Base title={`${title} · Andreas Jackson`} description={summary}>
+  <article class="section">
+    <div class="prose-wrap">
+      <p class="eyebrow"><a href="/projects">Projects</a> / {title}</p>
+      <h1>{title}</h1>
+      <p class="hook-line">{hook}</p>
+      <div class="meta-row">
+        <div class="tags">
+          {tags.map((tag) => <span class={`tag tag-${tag}`}>{tag}</span>)}
+          {
+            status === 'live' && (
+              <span class="tag tag-live" title="Live product">Live</span>
+            )
+          }
+        </div>
+        {
+          links.length > 0 && (
+            <div class="links">
+              {links.map((link) => (
+                <a class="btn btn-ghost" href={link.url}>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+      {cover && <img class="cover" src={cover} alt={coverAlt ?? title} />}
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .hook-line {
+    margin-top: 0.9rem;
+    font-size: 1.15rem;
+    font-weight: 560;
+    color: var(--accent-strong);
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-block: 1.2rem 1.8rem;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-live {
+    background: #e7f5ec;
+    color: #22713f;
+  }
+
+  .links {
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  .links .btn {
+    padding: 0.42rem 0.9rem;
+    font-size: 0.88rem;
+  }
+
+  .cover {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-bottom: 1.8rem;
+    background: #fff;
+  }
+</style>

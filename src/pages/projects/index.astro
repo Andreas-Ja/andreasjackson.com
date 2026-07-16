@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const tags = ['All', 'Finance', 'Product', 'Data', 'Ops'];
+---
+
+<Base
+  title="Projects · Andreas Jackson"
+  description="Portfolio projects: a monetized SaaS product, a live rental business, and revenue analytics built on real booking data."
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Projects</p>
+      <h1>Things I've built and run</h1>
+      <p class="muted intro">
+        Real products, a real business, and analysis on real data. Filter by
+        the kind of work you're hiring for.
+      </p>
+
+      <div class="filter-row" role="group" aria-label="Filter projects by tag">
+        {
+          tags.map((tag) => (
+            <button
+              class="filter-chip"
+              data-filter={tag}
+              aria-pressed={tag === 'All' ? 'true' : 'false'}
+            >
+              {tag}
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="card-grid" id="project-grid">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .intro {
+    margin-top: 0.8rem;
+    max-width: 36rem;
+  }
+
+  .filter-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-block: 1.6rem 1.4rem;
+  }
+
+  .filter-chip {
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 550;
+    padding: 0.32rem 0.95rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 120ms ease;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--ink-faint);
+  }
+
+  .filter-chip[aria-pressed='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+</style>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('.filter-chip');
+  const cards = document.querySelectorAll<HTMLElement>('.project-card');
+
+  function applyFilter(tag: string) {
+    chips.forEach((chip) =>
+      chip.setAttribute(
+        'aria-pressed',
+        chip.dataset.filter === tag ? 'true' : 'false'
+      )
+    );
+    cards.forEach((card) => {
+      const cardTags = (card.dataset.tags ?? '').split(',');
+      card.style.display =
+        tag === 'All' || cardTags.includes(tag) ? '' : 'none';
+    });
+  }
+
+  chips.forEach((chip) =>
+    chip.addEventListener('click', () => {
+      const tag = chip.dataset.filter ?? 'All';
+      applyFilter(tag);
+      const url = new URL(window.location.href);
+      if (tag === 'All') url.searchParams.delete('tag');
+      else url.searchParams.set('tag', tag);
+      history.replaceState(null, '', url);
+    })
+  );
+
+  const initial = new URLSearchParams(window.location.search).get('tag');
+  if (initial && [...chips].some((c) => c.dataset.filter === initial)) {
+    applyFilter(initial);
+  }
+</script>

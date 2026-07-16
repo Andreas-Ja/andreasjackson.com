@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="How I work · Andreas Jackson"
+  description="How I use AI tools as leverage: automation, analysis pipelines, and faster building, with my judgment behind every output."
+>
+  <section class="section">
+    <div class="prose-wrap prose">
+      <p class="eyebrow">How I work</p>
+      <h1>AI is my leverage, not my judgment</h1>
+      <p>
+        I work with AI tools (Claude and Claude Code, mostly) the way a strong
+        operator works with a strong team: I decide what to build, what good
+        looks like, and what's true, and I use AI to compress the time between
+        deciding and shipping. Everything that leaves my hands is something I
+        can defend line by line.
+      </p>
+      <p>Concretely, this is what that looks like:</p>
+
+      <h2>I automate real work</h2>
+      <p>
+        The Dune Lakes analytics pipeline is one command: it ingests a raw
+        OwnerRez booking export, cleans out the linked $0 block rows,
+        validates channel fees against actual fee data, and produces a
+        formatted Excel workbook with charts. Rebuilding the analysis after a
+        new export takes seconds instead of an afternoon. I've built similar
+        automation around my own job search: resume tailoring, keyword
+        matching against job descriptions, and application tracking.
+      </p>
+
+      <h2>I ship faster than one person should</h2>
+      <p>
+        <a href="/projects/nottomorrow">NotTomorrow</a> is a full-stack SaaS
+        product with an AI planning engine and subscription billing, built and
+        monetized by one person. AI-assisted development is the only reason
+        that was possible on that timeline. This site is another example: I
+        designed the structure and wrote the standards, and built it with
+        Claude Code as the pair.
+      </p>
+
+      <h2>I keep the numbers honest</h2>
+      <p>
+        Speed is worthless if the output is wrong. The habits come from
+        assurance work at EY: every figure traces to a source, estimates are
+        labeled as estimates, and when the data can't support a metric (like
+        true occupancy in the Dune Lakes analysis), I omit it rather than
+        fake it. AI accelerates my work; it doesn't get to lower the bar.
+      </p>
+
+      <h2>The toolkit</h2>
+      <ul>
+        <li>Claude and Claude Code for analysis, automation, and building</li>
+        <li>Python (pandas) for data pipelines</li>
+        <li>SQL and Power BI for reporting</li>
+        <li>Excel when Excel is the right answer, which is often</li>
+      </ul>
+    </div>
+  </section>
+</Base>

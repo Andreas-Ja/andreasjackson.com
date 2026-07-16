@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects'))
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const lanes = [
+  { tag: 'Finance', blurb: 'FP&A, unit economics, audit-grade rigor' },
+  { tag: 'Product', blurb: 'Shipped and monetized a SaaS product solo' },
+  { tag: 'Data', blurb: 'Python, SQL, Power BI, real datasets' },
+  { tag: 'Ops', blurb: 'Ran teams, timelines, and a real business' },
+];
+---
+
+<Base
+  title="Andreas Jackson · Analyst, builder, operator"
+  description="Strategy and finance analyst who builds and runs real things: a monetized SaaS product, a short-term rental business, and analytics on live data. EY, Gates Foundation, UC Berkeley Haas."
+>
+  <section class="section hero">
+    <div class="wrap">
+      <p class="eyebrow">Andreas Jackson · San Francisco, CA</p>
+      <h1>I build and run things with numbers behind them.</h1>
+      <p class="lede">
+        Analyst at EY, Berkeley Haas grad, and builder on the side. I've led
+        strategy work for the Gates Foundation and IKEA, shipped and monetized
+        a SaaS product solo, and I help run a short-term rental business with
+        six figures of revenue on the books. I use AI tools to move fast, and I
+        can defend every number on this site in an interview.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/projects">See my work</a>
+        <a class="btn btn-ghost" href="/Andreas_Jackson_Resume.pdf"
+          >Download resume</a
+        >
+        <a class="btn btn-ghost" href="mailto:andreasjackson@berkeley.edu"
+          >Email me</a
+        >
+      </div>
+      <p class="cred muted">
+        EY &nbsp;·&nbsp; Gates Foundation &nbsp;·&nbsp; IKEA &nbsp;·&nbsp;
+        Edison International &nbsp;·&nbsp; UC Berkeley Haas
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">What I do</p>
+      <div class="lane-grid">
+        {
+          lanes.map((lane) => (
+            <a class="lane" href={`/projects?tag=${lane.tag}`}>
+              <span class={`tag tag-${lane.tag}`}>{lane.tag}</span>
+              <span class="lane-blurb">{lane.blurb}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Featured projects</p>
+      <div class="card-grid">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+      <p style="margin-top: 1.5rem;">
+        <a href="/projects">All projects →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap closer">
+      <h2>Hiring for finance, product, data, or ops?</h2>
+      <p class="muted" style="max-width: 38rem; margin-block: 0.9rem 1.4rem;">
+        I'm looking for a full-time role in the Bay Area, Santa Barbara, or
+        remote. If any of the work here looks useful to your team, I'd love to
+        talk.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:andreasjackson@berkeley.edu"
+          >Get in touch</a
+        >
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/andreas-jackson"
+          >LinkedIn</a
+        >
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding-block: 5rem 3.5rem;
+  }
+
+  .hero h1 {
+    max-width: 44rem;
+  }
+
+  .lede {
+    max-width: 40rem;
+    margin-top: 1.3rem;
+    font-size: 1.14rem;
+    color: var(--ink-soft);
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 1.7rem;
+  }
+
+  .cred {
+    margin-top: 2.6rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.015em;
+  }
+
+  .lane-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 0.9rem;
+  }
+
+  .lane {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    padding: 1.05rem 1.15rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: border-color 140ms ease;
+  }
+
+  .lane:hover {
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  }
+
+  .lane-blurb {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding-block: 3rem 2.4rem;
+    }
+  }
+</style>

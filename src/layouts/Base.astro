@@ -1,0 +1,85 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/newsreader';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const navItems = [
+  { href: '/projects', label: 'Projects' },
+  { href: '/work', label: 'Work' },
+  { href: '/how-i-work', label: 'How I work' },
+  { href: '/about', label: 'About' },
+];
+
+const isCurrent = (href: string) =>
+  current === href || (href !== '/' && current.startsWith(href + '/'));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href="/">Andreas Jackson</a>
+        <nav class="site-nav" aria-label="Main">
+          {
+            navItems.map((item) => (
+              <a
+                href={item.href}
+                aria-current={isCurrent(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+          <a class="btn btn-ghost" href="/Andreas_Jackson_Resume.pdf">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap cols">
+        <div>
+          <strong>Andreas Jackson</strong> · San Francisco, CA<br />
+          <a href="mailto:andreasjackson@berkeley.edu"
+            >andreasjackson@berkeley.edu</a
+          >
+        </div>
+        <nav aria-label="Footer">
+          <a href="https://www.linkedin.com/in/andreas-jackson" rel="me"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/andreasjackson" rel="me">GitHub</a>
+          <a href="/Andreas_Jackson_Resume.pdf">Resume (PDF)</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
