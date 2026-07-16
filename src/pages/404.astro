@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Page not found · Andreas Jackson"
+  description="That page doesn't exist. Head back to the home page or the projects."
+>
+  <section class="section">
+    <div class="prose-wrap">
+      <p class="eyebrow">404</p>
+      <h1>That page doesn't exist.</h1>
+      <p class="muted" style="margin-block: 1rem 1.6rem;">
+        The link may be old, or I may have moved something. Everything worth
+        seeing is one click away.
+      </p>
+      <div style="display: flex; gap: 0.7rem; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="/">Home</a>
+        <a class="btn btn-ghost" href="/projects">Projects</a>
+      </div>
+    </div>
+  </section>
+</Base>

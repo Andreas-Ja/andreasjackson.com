@@ -38,7 +38,32 @@ const isCurrent = (href: string) =>
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL('/og.png', Astro.site)} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1f4e5f" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Andreas Jackson',
+        alternateName: 'AJ Jackson',
+        url: 'https://andreasjackson.com',
+        email: 'mailto:andreasjackson@berkeley.edu',
+        jobTitle: 'Analyst',
+        worksFor: { '@type': 'Organization', name: 'Ernst & Young' },
+        alumniOf: {
+          '@type': 'CollegeOrUniversity',
+          name: 'UC Berkeley, Haas School of Business',
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressRegion: 'CA',
+          addressLocality: 'San Francisco Bay Area',
+        },
+        sameAs: ['https://www.linkedin.com/in/andreas-jackson'],
+      })}
+    />
   </head>
   <body>
     <header class="site-header">
@@ -67,7 +92,7 @@ const isCurrent = (href: string) =>
     <footer class="site-footer">
       <div class="wrap cols">
         <div>
-          <strong>Andreas Jackson</strong> · San Francisco, CA<br />
+          <strong>Andreas Jackson</strong> · San Francisco Bay Area<br />
           <a href="mailto:andreasjackson@berkeley.edu"
             >andreasjackson@berkeley.edu</a
           >

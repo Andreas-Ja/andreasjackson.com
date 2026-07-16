@@ -21,7 +21,7 @@ const lanes = [
 >
   <section class="section hero">
     <div class="wrap">
-      <p class="eyebrow">Andreas Jackson · San Francisco, CA</p>
+      <p class="eyebrow">Andreas Jackson · San Francisco Bay Area</p>
       <h1>I build and run things with numbers behind them.</h1>
       <p class="lede">
         Analyst at EY, Berkeley Haas grad, and builder on the side. I've led
@@ -74,13 +74,61 @@ const lanes = [
     </div>
   </section>
 
+  <section class="section why">
+    <div class="wrap">
+      <p class="eyebrow">Why hire me</p>
+      <h2>The case, in four points</h2>
+      <div class="why-grid">
+        <div class="why-point">
+          <span class="why-num">01</span>
+          <h3>I've done the work at real stakes</h3>
+          <p>
+            Bank audits at EY, a partner-selection framework the Gates
+            Foundation acted on, and analytics tooling inside a Fortune 500
+            utility. <a href="/work">The work history</a> is short but it's
+            all load-bearing.
+          </p>
+        </div>
+        <div class="why-point">
+          <span class="why-num">02</span>
+          <h3>I ship, not just analyze</h3>
+          <p>
+            A monetized SaaS product and a rental business with six figures of
+            confirmed revenue, both live right now.
+            <a href="/projects">The projects</a> have receipts: real users,
+            real bookings, real margins.
+          </p>
+        </div>
+        <div class="why-point">
+          <span class="why-num">03</span>
+          <h3>I'm fast because I use AI well</h3>
+          <p>
+            I direct AI tools to automate pipelines and build products, which
+            makes me quicker than my years of experience suggest.
+            <a href="/how-i-work">How I work</a> shows exactly what that
+            means in practice.
+          </p>
+        </div>
+        <div class="why-point">
+          <span class="why-num">04</span>
+          <h3>Every number here is defensible</h3>
+          <p>
+            EY assurance habits: figures trace to sources, estimates are
+            labeled, and metrics the data can't support get omitted instead of
+            faked. Ask me about any number on this site in an interview.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap closer">
       <h2>Hiring for finance, product, data, or ops?</h2>
       <p class="muted" style="max-width: 38rem; margin-block: 0.9rem 1.4rem;">
-        I'm looking for a full-time role in the Bay Area, Santa Barbara, or
-        remote. If any of the work here looks useful to your team, I'd love to
-        talk.
+        I'm looking for a full-time role anywhere in the Bay Area, from San
+        Francisco down to the South Bay, plus Santa Barbara or remote. If any
+        of the work here looks useful to your team, I'd love to talk.
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:andreasjackson@berkeley.edu"
@@ -148,6 +196,35 @@ const lanes = [
 
   .lane-blurb {
     font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .why {
+    background: var(--surface);
+    border-block: 1px solid var(--line);
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 2rem 2.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .why-num {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+
+  .why-point h3 {
+    margin-block: 0.35rem 0.5rem;
+  }
+
+  .why-point p {
+    font-size: 0.97rem;
     color: var(--ink-soft);
   }
 
