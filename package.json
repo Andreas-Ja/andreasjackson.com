@@ -13,5 +13,8 @@
     "@fontsource-variable/inter": "^5.2.5",
     "@fontsource-variable/newsreader": "^5.2.5",
     "astro": "^5.7.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
   }
 }
