@@ -257,6 +257,11 @@ a:hover {
   color: var(--tag-data-ink);
 }
 
+.tag-AI {
+  background: #f0eaf6;
+  color: #6b3f8f;
+}
+
 .tag-Ops {
   background: var(--tag-ops-bg);
   color: var(--tag-ops-ink);

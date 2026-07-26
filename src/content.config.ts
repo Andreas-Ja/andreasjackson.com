@@ -8,7 +8,7 @@ const projects = defineCollection({
     // One line with a number in it, shown on cards. Keep it under ~90 chars.
     hook: z.string(),
     summary: z.string(),
-    tags: z.array(z.enum(['Finance', 'Product', 'Data', 'Ops'])),
+    tags: z.array(z.enum(['Finance', 'Product', 'Data', 'Ops', 'AI'])),
     featured: z.boolean().default(false),
     order: z.number().default(99),
     status: z.enum(['live', 'shipped', 'in-progress']).default('shipped'),

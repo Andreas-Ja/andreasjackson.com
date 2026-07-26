@@ -2,7 +2,7 @@
 title: 'NotTomorrow'
 hook: 'A full-stack SaaS product designed, built, and monetized solo, from zero to paying users'
 summary: 'An AI-powered planning app I took from idea to paid product on my own: product design, engineering, billing, and go-to-market.'
-tags: ['Product', 'Data']
+tags: ['Product', 'Data', 'AI']
 featured: true
 order: 1
 status: 'live'
