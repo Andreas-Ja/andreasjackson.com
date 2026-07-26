@@ -3,7 +3,7 @@ title: 'S&P 500 return analyzer'
 hook: 'Rolling 1 to 30 year returns across 95 years of S&P 500 history, recomputed live'
 summary: 'An interactive R Shiny app for exploring the full daily history of the S&P 500: a zoomable price timeline, rolling multi-year total returns, and distribution statistics for any window you pick.'
 tags: ['Finance', 'Data']
-featured: false
+featured: true
 order: 6
 status: 'live'
 links:

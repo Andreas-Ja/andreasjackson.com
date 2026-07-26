@@ -3,7 +3,7 @@ title: 'Dune Lakes (the business)'
 hook: 'A live multi-cottage rental compound with six figures of confirmed revenue on the books'
 summary: 'A short-term rental business I help run: listings, pricing, channel strategy, direct bookings, and merchandise, operated on OwnerRez.'
 tags: ['Ops', 'Product', 'Finance']
-featured: true
+featured: false
 order: 3
 status: 'live'
 links:

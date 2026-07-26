@@ -3,7 +3,7 @@ title: 'Overlap-scoring recommendation engine'
 hook: 'A custom ranking algorithm over a normalized 38-entity, 33-item dataset, shipped dependency-free'
 summary: 'A single-file web app that ranks optimal purchases against any opposing lineup, built on a custom overlap-plus-hard-counter scoring algorithm, a normalized 38-hero / 33-item dataset, and a self-contained REST API asset pipeline.'
 tags: ['Product', 'Data']
-featured: true
+featured: false
 order: 5
 status: 'live'
 links:
