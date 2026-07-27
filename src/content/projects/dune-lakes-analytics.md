@@ -1,7 +1,7 @@
 ---
 title: 'Dune Lakes revenue analytics'
 hook: '$122K of real booking revenue, analyzed down to channel fees and an 86% contribution margin'
-summary: 'A Python and Excel analytics pipeline built on the real reservation data of a family-run rental business I advise: revenue on the books, channel economics, unit performance, cancellations, and margin.'
+summary: 'A Python and Excel analytics pipeline built on the real reservation data of a short-term rental business I advise: revenue on the books, channel economics, unit performance, cancellations, and margin.'
 tags: ['Finance', 'Data']
 featured: false
 order: 2

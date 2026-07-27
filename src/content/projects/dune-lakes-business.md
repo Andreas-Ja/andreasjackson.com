@@ -1,7 +1,7 @@
 ---
 title: 'Dune Lakes: booking site and channel strategy'
-hook: 'Built the direct-booking website and merch store for a family rental business, and advised on channel economics'
-summary: 'An ongoing advisory and build project for a family-run short-term rental business: the direct-booking website, an integrated print-on-demand storefront, and analysis of where the channel fees were going.'
+hook: 'Built the direct-booking website and merch store for a short-term rental business, and advised on channel economics'
+summary: 'An ongoing advisory and build project for a short-term rental business: the direct-booking website, an integrated print-on-demand storefront, and analysis of where the channel fees were going.'
 tags: ['Ops', 'Product', 'Finance']
 featured: false
 order: 3
@@ -13,10 +13,9 @@ links:
 
 ## What it is
 
-Dune Lakes is a multi-cottage short-term rental compound owned and operated by
-my family. I am not an owner and I do not run the business. I work on it the way
-an outside consultant would: I build the digital side and advise on the numbers,
-and the owners make the decisions.
+Dune Lakes is a multi-cottage short-term rental compound in California. I don't
+own it or run it. I work on it the way an outside consultant would: I build the
+digital side and advise on the numbers, and the owners make the decisions.
 
 ## What I've done
 
@@ -36,11 +35,11 @@ and the owners make the decisions.
 
 ## Why it's here
 
-It is the closest thing I have to a standing client relationship. The work is
-unglamorous and it has a real consequence attached: if the booking site breaks
-or the merch store misroutes an order, an actual guest is affected and someone
-in my family hears about it. That is a useful constraint to work under, and it
-is why the analysis had to be honest rather than flattering.
+Most side projects have no consequences. This one does. If the booking site
+breaks or the merch store misroutes an order, a real guest is affected and
+someone finds out immediately. Working under that constraint is why the
+analysis had to be honest rather than flattering, and why I left occupancy out
+of it entirely rather than estimate a number the data couldn't support.
 
 ## Skills demonstrated
 
