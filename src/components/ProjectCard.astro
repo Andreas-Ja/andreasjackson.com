@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { title, hook, summary, tags, status } = project.data;
+const { title, hook, summary, tags, status, cover, coverAlt } = project.data;
 ---
 
 <a
@@ -14,14 +14,23 @@ const { title, hook, summary, tags, status } = project.data;
   href={`/projects/${project.id}`}
   data-tags={tags.join(',')}
 >
-  <h3>
-    {title}
-    {status === 'live' && <span class="live-dot" title="Live">●</span>}
-  </h3>
-  <p class="hook">{hook}</p>
-  <p class="summary">{summary}</p>
-  <div class="tags">
-    {tags.map((tag) => <span class={`tag tag-${tag}`}>{tag}</span>)}
+  {
+    cover && (
+      <div class="thumb">
+        <img src={cover} alt={coverAlt ?? title} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="body">
+    <h3>
+      {title}
+      {status === 'live' && <span class="live-dot" title="Live">●</span>}
+    </h3>
+    <p class="hook">{hook}</p>
+    <p class="summary">{summary}</p>
+    <div class="tags">
+      {tags.map((tag) => <span class={`tag tag-${tag}`}>{tag}</span>)}
+    </div>
   </div>
 </a>
 
@@ -31,5 +40,28 @@ const { title, hook, summary, tags, status } = project.data;
     font-size: 0.7em;
     vertical-align: 0.2em;
     margin-left: 0.3rem;
+  }
+
+  .thumb {
+    margin: -1.4rem -1.4rem 0.9rem;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    background: #f4f2ee;
+    border-bottom: 1px solid var(--line);
+    aspect-ratio: 16 / 9;
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    flex-grow: 1;
   }
 </style>
