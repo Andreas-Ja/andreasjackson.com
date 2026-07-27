@@ -1,9 +1,9 @@
 ---
 title: 'Overlap-scoring recommendation engine'
-hook: 'A custom ranking algorithm over a normalized 38-entity, 33-item dataset, shipped dependency-free'
-summary: 'A single-file web app that ranks optimal purchases against any opposing lineup, built on a custom overlap-plus-hard-counter scoring algorithm, a normalized 38-hero / 33-item dataset, and a self-contained REST API asset pipeline.'
+hook: 'A weighted set-overlap ranking algorithm in vanilla JavaScript, zero dependencies, one static file'
+summary: 'A recommendation engine built from scratch: custom scoring algorithm, a normalized 38x33 relational dataset compiled from unstructured sources, REST API integration with a 71-asset build pipeline, and an accessible responsive UI, all in framework-free JavaScript.'
 tags: ['Product', 'Data']
-featured: false
+featured: true
 order: 5
 status: 'live'
 links:
@@ -62,10 +62,15 @@ It is the smallest complete example of how I work: take knowledge that only
 exists as folklore, model it properly, decide what the ranking should actually
 optimize for, and ship something a stranger can use without instructions.
 
-## Skills demonstrated
+## Stack and skills
 
-Front-end engineering (semantic HTML, CSS grid, custom-property design tokens,
-responsive and themed UI, framework-free JavaScript with DOM rendering and state
-management), algorithm design, data modeling and schema design, REST API
-integration, data wrangling and normalization, UX and information design,
-accessibility, Git, and CI-free continuous deployment.
+**Algorithm and data:** scoring algorithm design (weighted set overlap with
+tiering and exclusion rules), relational data modeling and schema design, data
+normalization from unstructured sources, REST API integration, reconciling
+mismatched identifiers across two sources.
+
+**Engineering:** framework-free JavaScript (DOM rendering, application state,
+event handling), semantic HTML, CSS grid, custom-property design tokens,
+responsive layout, light and dark theming, WCAG-minded keyboard accessibility,
+image optimization pipeline (71 WebP assets), Git, static deploy via GitHub
+Pages with no build step and no runtime dependencies.
