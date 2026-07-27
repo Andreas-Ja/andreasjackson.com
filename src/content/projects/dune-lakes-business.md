@@ -1,7 +1,7 @@
 ---
-title: 'Dune Lakes (the business)'
-hook: 'A live multi-cottage rental compound with six figures of confirmed revenue on the books'
-summary: 'A short-term rental business I help run: listings, pricing, channel strategy, direct bookings, and merchandise, operated on OwnerRez.'
+title: 'Dune Lakes: booking site and channel strategy'
+hook: 'Built the direct-booking website and merch store for a family rental business, and advised on channel economics'
+summary: 'An ongoing advisory and build project for a family-run short-term rental business: the direct-booking website, an integrated print-on-demand storefront, and analysis of where the channel fees were going.'
 tags: ['Ops', 'Product', 'Finance']
 featured: false
 order: 3
@@ -13,37 +13,37 @@ links:
 
 ## What it is
 
-Dune Lakes is a multi-cottage short-term rental compound that I help run. It's
-a real operating business with real guests: $122K of confirmed revenue across
-the current booking window, a blended ADR around $1,550 a night for
-whole-compound stays, and a booking runway of about 107 days of average lead
-time.
+Dune Lakes is a multi-cottage short-term rental compound owned and operated by
+my family. I am not an owner and I do not run the business. I work on it the way
+an outside consultant would: I build the digital side and advise on the numbers,
+and the owners make the decisions.
 
-## What running it involves
+## What I've done
 
-- **Channel strategy:** the business books through Airbnb, Vrbo, and its own
-  direct site. Because Airbnb's fee load is 15.5% versus 2.8% direct, a big
-  part of the job is moving demand toward direct bookings, which is worth
-  about 13 points of margin per shifted booking.
-- **Operations:** OwnerRez as the property management system, multi-cottage
-  calendar handling, cleaning and turnover logistics, and guest
-  communication.
-- **The direct-booking product:** a live website at
-  [dunelakesltd.com](https://dunelakesltd.com) with booking and merchandise,
-  which is effectively a small e-commerce product I get to operate and
-  improve.
-- **The numbers:** I also built a full analytics pipeline on the business's
-  real booking data. That work has [its own case
-  study](/projects/dune-lakes-analytics).
+- **The direct-booking website.** I built and maintain
+  [dunelakesltd.com](https://dunelakesltd.com), including the embedded OwnerRez
+  booking integration, and handle ongoing updates.
+- **A merchandise storefront.** I designed an original merch line and launched
+  an integrated print-on-demand store through Printful, owning the product
+  design and the storefront setup.
+- **Channel economics analysis.** Bookings arrive through Airbnb, Vrbo, and the
+  direct site, and those channels are not equally profitable. Airbnb carries a
+  15.5% fee load against 2.8% on direct, so every booking that shifts to the
+  direct site is worth roughly 13 points of margin. That is the main argument
+  for the direct-booking site existing at all.
+- **The analytics.** I built a Python pipeline on the business's real booking
+  data, which has [its own case study](/projects/dune-lakes-analytics).
 
-## Why it matters for hiring
+## Why it's here
 
-Running a real business, even a small one, means owning outcomes with no one
-else to hand problems to: pricing calls, margin trade-offs, unhappy guests,
-and revenue that either shows up or doesn't. It's the operating experience
-behind the analysis work on this site.
+It is the closest thing I have to a standing client relationship. The work is
+unglamorous and it has a real consequence attached: if the booking site breaks
+or the merch store misroutes an order, an actual guest is affected and someone
+in my family hears about it. That is a useful constraint to work under, and it
+is why the analysis had to be honest rather than flattering.
 
 ## Skills demonstrated
 
-Business operations, pricing, channel strategy and unit economics, e-commerce,
-customer experience, vendor and turnover logistics.
+Web development and maintenance, third-party booking integration, e-commerce
+setup, channel and margin analysis, unit economics, client advisory, product
+design.
