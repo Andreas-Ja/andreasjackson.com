@@ -1,6 +1,6 @@
 ---
-title: 'Overlap-scoring recommendation engine'
-hook: 'A weighted set-overlap ranking algorithm in vanilla JavaScript, zero dependencies, one static file'
+title: 'Recommendation engine for competitive gaming'
+hook: 'The best purchase is rarely the strongest counter, so I built a set-overlap ranking algorithm that finds it. Vanilla JavaScript, zero dependencies, one static file.'
 summary: 'A recommendation engine built from scratch: custom scoring algorithm, a normalized 38x33 relational dataset compiled from unstructured sources, REST API integration with a 71-asset build pipeline, and an accessible responsive UI, all in framework-free JavaScript.'
 tags: ['Product', 'Data']
 featured: true
