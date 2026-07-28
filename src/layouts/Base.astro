@@ -10,10 +10,8 @@ interface Props {
 
 const { title, description } = Astro.props;
 
-// Cloudflare Web Analytics. Paste the beacon token from
-// dash.cloudflare.com -> Analytics & Logs -> Web Analytics -> Add a site.
-// Left empty the script is not emitted at all, so nothing breaks.
-const CF_ANALYTICS_TOKEN = '';
+// Cloudflare Web Analytics runs via automatic injection on the zone.
+// No beacon script needed here; adding one would double-count.
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const current = Astro.url.pathname.replace(/\/$/, '') || '/';
 
@@ -120,15 +118,6 @@ const isCurrent = (href: string) =>
       <slot />
     </main>
 
-    {
-      CF_ANALYTICS_TOKEN && (
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon={JSON.stringify({ token: CF_ANALYTICS_TOKEN })}
-        />
-      )
-    }
 
     <footer class="site-footer">
       <div class="wrap cols">
