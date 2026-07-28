@@ -6,6 +6,8 @@ tags: ['Product', 'Data']
 featured: true
 order: 5
 status: 'live'
+cover: '/images/covers/deadlock.png'
+coverAlt: 'The recommendation engine ranking items against a selected enemy lineup'
 links:
   - label: 'Try the live app'
     url: 'https://andreas-ja.github.io/deadlock-counter-buy/'

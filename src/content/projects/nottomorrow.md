@@ -6,6 +6,8 @@ tags: ['Product', 'Data', 'AI']
 featured: true
 order: 1
 status: 'live'
+cover: '/images/covers/nottomorrow.png'
+coverAlt: 'The NotTomorrow web app homepage'
 links:
   - label: 'Visit nottomorrow.app'
     url: 'https://nottomorrow.app'

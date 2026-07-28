@@ -6,6 +6,8 @@ tags: ['Data']
 featured: false
 order: 7
 status: 'live'
+cover: '/images/covers/crashes.png'
+coverAlt: 'The California crash analyzer dashboard'
 links:
   - label: 'Open the live dashboard'
     url: 'https://andreasjackson.shinyapps.io/California_Crashes/'

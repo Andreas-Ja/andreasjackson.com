@@ -6,6 +6,8 @@ tags: ['Ops', 'Product', 'Finance']
 featured: false
 order: 3
 status: 'live'
+cover: '/images/covers/dune-lakes.png'
+coverAlt: 'The Dune Lakes direct-booking website'
 links:
   - label: 'Visit dunelakesltd.com'
     url: 'https://dunelakesltd.com'

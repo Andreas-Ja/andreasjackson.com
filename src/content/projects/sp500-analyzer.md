@@ -6,6 +6,8 @@ tags: ['Finance', 'Data']
 featured: true
 order: 6
 status: 'live'
+cover: '/images/covers/sp500.png'
+coverAlt: 'The S&P 500 analyzer showing a price timeline and multi-year returns'
 links:
   - label: 'Open the live app'
     url: 'https://andreasjackson.shinyapps.io/sp500/'

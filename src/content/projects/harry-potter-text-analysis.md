@@ -6,6 +6,8 @@ tags: ['Data']
 featured: false
 order: 8
 status: 'live'
+cover: '/images/covers/harry-potter.png'
+coverAlt: 'The text-mining app showing character mention trends'
 links:
   - label: 'Open the live app'
     url: 'https://andreasjackson.shinyapps.io/Harry_Potter/'

@@ -6,6 +6,8 @@ tags: ['Ops']
 featured: true
 order: 2
 status: 'shipped'
+cover: '/images/covers/aba.png'
+coverAlt: 'ABA Consulting: three years, four roles, four client engagements, 80+ candidates recruited'
 ---
 
 ## The arc
