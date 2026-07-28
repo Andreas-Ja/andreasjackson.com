@@ -29,9 +29,10 @@ digital side and advise on the numbers, and the owners make the decisions.
   design and the storefront setup.
 - **Channel economics analysis.** Bookings arrive through Airbnb, Vrbo, and the
   direct site, and those channels are not equally profitable. Airbnb carries a
-  15.5% fee load against 2.8% on direct, so every booking that shifts to the
-  direct site is worth roughly 13 points of margin. That is the main argument
-  for the direct-booking site existing at all.
+  15.5% commission on every booking against 2.9% payment processing on direct,
+  so each booking that shifts to the direct site is worth roughly 12.6 points
+  of margin. That is the main argument for the direct-booking site existing at
+  all.
 - **The analytics.** I built a Python pipeline on the business's real booking
   data, which has [its own case study](/projects/dune-lakes-analytics).
 
