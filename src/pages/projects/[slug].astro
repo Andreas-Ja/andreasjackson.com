@@ -35,7 +35,12 @@ const { Content } = await render(project);
           links.length > 0 && (
             <div class="links">
               {links.map((link) => (
-                <a class="btn btn-ghost" href={link.url}>
+                <a
+                  class="btn btn-ghost"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                >
                   {link.label}
                 </a>
               ))}
