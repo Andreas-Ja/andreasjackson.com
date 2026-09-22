@@ -406,4 +406,8 @@ a:hover {
   .site-nav {
     gap: 0.9rem;
   }
+
+  .site-header .icon-link {
+    display: none;
+  }
 }

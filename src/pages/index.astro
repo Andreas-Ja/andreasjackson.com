@@ -2,6 +2,12 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { existsSync } from 'node:fs';
+
+// Drop a portrait at public/images/aj.jpg and the hero becomes two-column.
+// Checked at build time so a missing file means no image tag, not a broken one.
+const PHOTO = '/images/aj.jpg';
+const hasPhoto = existsSync(new URL(`../../public${PHOTO}`, import.meta.url));
 
 const projects = (await getCollection('projects'))
   .filter((p) => p.data.featured)
@@ -9,7 +15,7 @@ const projects = (await getCollection('projects'))
 
 const lanes = [
   { tag: 'Finance', blurb: 'FP&A, unit economics, audit-grade rigor' },
-  { tag: 'Product', blurb: 'Shipped and monetized a SaaS product solo' },
+  { tag: 'Product', blurb: 'Shipped a full-stack SaaS product solo' },
   { tag: 'Data', blurb: 'Python, SQL, Power BI, real datasets' },
   { tag: 'Ops', blurb: 'Led teams, timelines, and hiring' },
   { tag: 'AI', blurb: 'Built with LLMs, and ran research on them' },
@@ -18,17 +24,31 @@ const lanes = [
 
 <Base
   title="Andreas Jackson · Analyst, builder, operator"
-  description="Analyst and builder: a monetized SaaS product, published empirical research on AI models, and analytics on live business data. EY, Gates Foundation, UC Berkeley Haas."
+  description="Analyst and builder: a shipped SaaS product, published empirical research on AI models, and analytics on live business data. EY, Gates Foundation, UC Berkeley Haas."
 >
   <section class="section hero">
-    <div class="wrap">
+    <div class:list={['wrap', 'hero-grid', { 'has-photo': hasPhoto }]}>
+      {
+        hasPhoto && (
+          <div class="hero-photo">
+            <img
+              src={PHOTO}
+              alt="Andreas Jackson"
+              width="600"
+              height="800"
+              fetchpriority="high"
+            />
+          </div>
+        )
+      }
+      <div class="hero-text">
       <h1>Andreas Jackson</h1>
       <p class="role">
         Analyst at EY · Berkeley Haas · San Francisco Bay Area
       </p>
       <p class="lede">
         I've run strategy engagements for the Gates Foundation, IKEA, and
-        T-Mobile, shipped and monetized a SaaS product on my own, published an
+        T-Mobile, shipped a full-stack SaaS product on my own, published an
         empirical study on how AI models behave on real occupational work, and
         I build and advise on the digital side of a short-term rental
         business.
@@ -50,6 +70,7 @@ const lanes = [
         EY &nbsp;·&nbsp; Gates Foundation &nbsp;·&nbsp; IKEA &nbsp;·&nbsp;
         Edison International &nbsp;·&nbsp; UC Berkeley Haas
       </p>
+      </div>
     </div>
   </section>
 
@@ -100,8 +121,8 @@ const lanes = [
           <span class="why-num">02</span>
           <h3>I ship, not just analyze</h3>
           <p>
-            A monetized SaaS product with paying users, a published research
-            study, and a live booking site I built and maintain.
+            A live SaaS product with subscription billing built end to end, a
+            published research study, and a booking site I built and maintain.
             <a href="/projects">The projects</a> have receipts rather than
             descriptions.
           </p>
@@ -157,6 +178,43 @@ const lanes = [
 
   .hero h1 {
     max-width: 44rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* Portrait: sits above the text on phones, beside it on wider screens. */
+  .hero-photo {
+    order: -1;
+    width: min(11rem, 55vw);
+  }
+
+  .hero-photo img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgb(28 32 36 / 0.08);
+    background: var(--surface);
+  }
+
+  @media (min-width: 780px) {
+    .hero-grid.has-photo {
+      grid-template-columns: minmax(0, 1fr) 19rem;
+      gap: 3.5rem;
+    }
+
+    .hero-photo {
+      order: 1;
+      width: 100%;
+      justify-self: end;
+    }
   }
 
   .role {

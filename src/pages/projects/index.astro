@@ -7,12 +7,12 @@ const projects = (await getCollection('projects')).sort(
   (a, b) => a.data.order - b.data.order
 );
 
-const tags = ['All', 'Finance', 'Product', 'Data', 'Ops'];
+const tags = ['All', 'Finance', 'Product', 'Data', 'Ops', 'AI'];
 ---
 
 <Base
   title="Projects · Andreas Jackson"
-  description="Portfolio projects: a monetized SaaS product, a live rental business, and revenue analytics built on real booking data."
+  description="Portfolio projects: a shipped SaaS product, a live rental business, and revenue analytics built on real booking data."
 >
   <section class="section">
     <div class="wrap">
