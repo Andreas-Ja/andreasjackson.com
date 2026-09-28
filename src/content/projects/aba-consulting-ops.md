@@ -1,13 +1,13 @@
 ---
 title: 'Building the analyst org at ABA Consulting'
-hook: 'Three years from analyst to senior advisor: four client engagements, teams of 5 to 8, and the hiring pipeline for 80+ candidates'
+hook: 'Analyst to project manager in three years: four client engagements, teams of 5 to 8, and the hiring pipeline for 80+ candidates'
 summary: 'Delivery and internal operations at a student consulting organization: client work for T-Mobile, IKEA, The Assistance Fund, and the Gates Foundation, plus the recruiting pipeline, training curriculum, and culture the org ran on.'
 tags: ['Ops']
 featured: true
 order: 2
 status: 'shipped'
 cover: '/images/covers/aba.png'
-coverAlt: 'ABA Consulting: three years, four roles, four client engagements, 80+ candidates recruited'
+coverAlt: 'ABA Consulting, analyst to project manager: three years, four roles, four client engagements, 80+ candidates recruited'
 ---
 
 ## The arc

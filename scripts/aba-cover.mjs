@@ -56,7 +56,7 @@ const bg = Buffer.from(`
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
   <rect width="${W}" height="${H}" fill="#1f4e5f"/>
   <text x="100" y="185" font-family="Georgia, serif" font-size="38" fill="#9fc4ce">ABA Consulting</text>
-  <text x="100" y="280" font-family="Georgia, serif" font-size="74" font-weight="600" fill="#ffffff">Analyst to Senior Advisor</text>
+  <text x="100" y="280" font-family="Georgia, serif" font-size="74" font-weight="600" fill="#ffffff">Analyst to Project Manager</text>
   <line x1="100" y1="355" x2="1500" y2="355" stroke="#3d6b7a" stroke-width="2"/>
   <text x="100" y="470" font-family="Georgia, serif" font-size="82" font-weight="600" fill="#ffffff">3</text>
   <text x="100" y="518" font-family="Arial, sans-serif" font-size="26" fill="#9fc4ce">years, four roles</text>
