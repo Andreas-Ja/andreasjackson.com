@@ -1,7 +1,7 @@
 ---
-title: 'Building the analyst org at ABA Consulting'
+title: 'Sourcing clients and leading teams at ABA Consulting'
 hook: 'Analyst to project manager in three years: four client engagements, teams of 5 to 8, and the hiring pipeline for 80+ candidates'
-summary: 'Delivery and internal operations at a student consulting organization: client work for T-Mobile, IKEA, The Assistance Fund, and the Gates Foundation, plus the recruiting pipeline, training curriculum, and culture the org ran on.'
+summary: 'Project manager at a student consulting organization: sourced clients, led analyst teams of 5 to 8 on engagements for The Assistance Fund and the Gates Foundation, and ran the recruiting pipeline and training the org depended on.'
 tags: ['Ops']
 featured: true
 order: 2
@@ -22,7 +22,9 @@ every year.
 
 ## Delivery
 
-I worked on four client engagements, moving from analyst to running them:
+As a project manager I sourced the clients, owned the timelines, and led
+analyst teams of 5 to 8 from scoping through executive delivery. Before that I
+worked on two engagements as an analyst. All four:
 
 - **T-Mobile** (2022). Customer and industry research on Gen Z brand
   recognition of their 5G product, built on a 1,100+ response survey. I
@@ -40,9 +42,6 @@ I worked on four client engagements, moving from analyst to running them:
   quantitative partner-scoring methodology from 30+ peer-reviewed sources and
   10+ expert interviews, led 8 analysts across 5 workstreams, and delivered the
   recommendation directly to the Foundation's Manager of Strategy.
-
-As a project manager I sourced clients, owned timelines, and led analyst teams
-of 5 to 8 from scoping through executive delivery.
 
 ## Recruiting
 
